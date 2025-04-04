@@ -1,95 +1,95 @@
 # Infaq App
 
-Aplikasi sederhana untuk menagih dan mengelola infaq di lingkungan masyarakat, dibangun dengan React Native (Expo) dan SQLite.
+A simple mobile application for managing and tracking charitable donations (infaq) in community environments, built with React Native (Expo) and SQLite.
 
 https://github.com/user-attachments/assets/001602e7-f722-4bd0-8cb6-7415ea299738
 
-## Fitur Utama
+## Key Features
 
-- 📝 Catat transaksi infaq warga
-- 📊 Lihat laporan infaq per periode
-- 🔍 Cari data warga dan transaksi
-- 📱 Tampilan mobile yang responsif
-- 🔄 Penyimpanan data offline dengan SQLite
+- 📝 Record donation transactions
+- 📊 View donation reports by period
+- 🔍 Search resident data and transactions
+- 📱 Mobile-responsive interface
+- 🔄 Offline data storage with SQLite
 
-## Teknologi yang Digunakan
+## Technologies Used
 
 - ⚛️ React Native (Expo)
 - 🗃️ SQLite (expo-sqlite)
-- � TypeScript (opsional)
+- � TypeScript (optional)
 - � React Navigation
-- 🎨 UI Library (React Native Paper atau NativeBase)
+- 🎨 UI Library (React Native Paper or NativeBase)
 
-## Instalasi
+## Installation
 
-1. Pastikan Anda telah menginstall:
+1. Ensure you have installed:
    - Node.js (v14+)
    - Expo CLI (`npm install -g expo-cli`)
-   - Yarn (opsional)
+   - Yarn (optional)
 
-2. Clone repositori ini:
+2. Clone this repository:
    ```bash
-   git clone [url-repo-anda]
+   git clone [your-repo-url]
    cd infaq-app
    ```
 
 3. Install dependencies:
    ```bash
    npm install
-   # atau
+   # or
    yarn install
    ```
 
-4. Jalankan aplikasi:
+4. Run the application:
    ```bash
    expo start
    ```
-   
-## Konfigurasi Database
 
-Aplikasi menggunakan SQLite melalui `expo-sqlite`. Contoh inisialisasi database:
+## Database Configuration
+
+The app uses SQLite via `expo-sqlite`. Example database initialization:
 
 ```javascript
 import * as SQLite from 'expo-sqlite';
 
 const db = SQLite.openDatabase('infaq.db');
 
-// Inisialisasi tabel
+// Initialize tables
 db.transaction(tx => {
   tx.executeSql(
-    `CREATE TABLE IF NOT EXISTS warga (
+    `CREATE TABLE IF NOT EXISTS residents (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
-      nama TEXT NOT NULL,
-      alamat TEXT,
-      no_hp TEXT
+      name TEXT NOT NULL,
+      address TEXT,
+      phone TEXT
     );`
   );
   
   tx.executeSql(
-    `CREATE TABLE IF NOT EXISTS transaksi (
+    `CREATE TABLE IF NOT EXISTS transactions (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
-      warga_id INTEGER,
-      jumlah INTEGER NOT NULL,
-      tanggal TEXT NOT NULL,
-      keterangan TEXT,
-      FOREIGN KEY (warga_id) REFERENCES warga (id)
+      resident_id INTEGER,
+      amount INTEGER NOT NULL,
+      date TEXT NOT NULL,
+      notes TEXT,
+      FOREIGN KEY (resident_id) REFERENCES residents (id)
     );`
   );
 });
 ```
 
-## Kontribusi
+## Contribution
 
-1. Fork project ini
-2. Buat branch baru (`git checkout -b fitur-baru`)
-3. Commit perubahan Anda (`git commit -am 'Menambahkan fitur baru'`)
-4. Push ke branch (`git push origin fitur-baru`)
-5. Buat Pull Request
+1. Fork this project
+2. Create a new branch (`git checkout -b new-feature`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin new-feature`)
+5. Create a Pull Request
 
-## Lisensi
+## License
 
 [MIT](LICENSE)
 
 ---
 
-Dikembangkan dengan ❤️ untuk masyarakat
+Developed with ❤️ for community empowerment
