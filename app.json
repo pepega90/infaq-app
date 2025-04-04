@@ -1,28 +1,34 @@
 {
   "expo": {
-    "name": "infaq_app",
+    "name": "Catatan Infaq",
     "slug": "infaq_app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/infaq_logo.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/infaq_logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "ios": {
-      "supportsTablet": true
-    },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/infaq_logo.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.ajimustofa.aplikasi_infaq",
+      "versionCode": 1,
+      "permissions": []
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": ["expo-sqlite"],
+    "extra": {
+      "eas": {
+        "projectId": "d8ad984a-bb91-4c96-a6f5-d3f051d24580"
+      }
     }
   }
 }
