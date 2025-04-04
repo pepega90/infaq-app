@@ -42,24 +42,7 @@ Aplikasi sederhana untuk menagih dan mengelola infaq di lingkungan masyarakat, d
    ```bash
    expo start
    ```
-
-## Struktur Folder
-
-```
-infaq-app/
-├── assets/            # File aset (gambar, font)
-├── components/        # Komponen reusable
-├── constants/         # Konstanta aplikasi
-├── hooks/             # Custom hooks
-├── navigation/        # Konfigurasi navigasi
-├── screens/           # Halaman aplikasi
-├── services/          # Layanan (database, API)
-├── types/             # Type definitions (jika pakai TypeScript)
-├── utils/             # Utility functions
-├── App.tsx            # Entry point
-└── package.json
-```
-
+   
 ## Konfigurasi Database
 
 Aplikasi menggunakan SQLite melalui `expo-sqlite`. Contoh inisialisasi database:
