@@ -2,6 +2,8 @@
 
 Aplikasi sederhana untuk menagih dan mengelola infaq di lingkungan masyarakat, dibangun dengan React Native (Expo) dan SQLite.
 
+https://github.com/user-attachments/assets/001602e7-f722-4bd0-8cb6-7415ea299738
+
 ## Fitur Utama
 
 - 📝 Catat transaksi infaq warga
