@@ -16,9 +16,8 @@ https://github.com/user-attachments/assets/001602e7-f722-4bd0-8cb6-7415ea299738
 
 - ⚛️ React Native (Expo)
 - 🗃️ SQLite (expo-sqlite)
-- � TypeScript (optional)
 - � React Navigation
-- 🎨 UI Library (React Native Paper or NativeBase)
+- 🎨 UI Library (React Native Paper)
 
 ## Installation
 
