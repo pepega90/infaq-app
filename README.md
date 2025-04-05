@@ -84,11 +84,6 @@ db.transaction(tx => {
 3. Commit your changes (`git commit -am 'Add new feature'`)
 4. Push to the branch (`git push origin new-feature`)
 5. Create a Pull Request
-
-## License
-
-[MIT](LICENSE)
-
 ---
 
 Developed with ❤️ for community empowerment
